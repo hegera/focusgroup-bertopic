@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks (work in progress - not ready to share)
+notebooks/analysis.ipynb
+notebooks/lda_baseline.ipynb
+
+# Data files (available on Zenodo)
+data/data.csv
+
+# Embedding files (users regenerate)
+embeddings/embeddings.npy
+embeddings/index.csv
+
+# Large model artifacts (users regenerate)
+results/final_model_*/topic_model
+
+# Temporary files
+*.log
+*.tmp
+.cache/

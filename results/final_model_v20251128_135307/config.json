@@ -1,0 +1,10 @@
+{
+    "seed": 42,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+    "umap__n_neighbors": 15,
+    "umap__n_components": 10,
+    "hdbscan__min_cluster_size": 15,
+    "num_topics": 7,
+    "selection_rationale": "Highest coherence not collapsed to 2 clusters",
+    "timestamp": "20251128_135307"
+}

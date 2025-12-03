@@ -1,0 +1,68 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+type: software
+title: "Neural Topic Modeling Pipeline for Focus Group Analysis"
+authors:
+  - family-names: Arfaoui
+    given-names: Heger
+    affiliation: "National Engineering School of Tunis, University of Tunis El Manar; Pasteur Institute of Tunis, University of Tunis El Manar"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Hergli
+    given-names: "Mohamed Iheb"
+    affiliation: "Mediterranean Institute of Technology, South Mediterranean University"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Benzina
+    given-names: Beya
+    affiliation: "Pasteur Institute of Tunis, University of Tunis El Manar"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: BenMiled
+    given-names: Slimane
+    affiliation: "Pasteur Institute of Tunis, University of Tunis El Manar"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/hegera/focusgroup-bertopic"
+url: "https://doi.org/10.5281/zenodo.17798456"  # Will be assigned by Zenodo after archiving
+abstract: >
+  A reproducible Python pipeline for applying BERTopic (neural topic modeling) 
+  to focus group transcripts. Includes systematic hyperparameter exploration, 
+  bootstrap stability analysis, multi-criteria model selection, and comparison 
+  with LDA baseline. Designed for small conversational qualitative datasets.
+keywords:
+  - topic modeling
+  - BERTopic
+  - transformers
+  - focus groups
+  - qualitative analysis
+  - natural language processing
+  - reproducible research
+license: MIT
+version: "1.0"
+date-released: "2025-01-XX"
+references:
+  - type: article
+    title: "A Reproducible Framework for Neural Topic Modeling in Focus Group Analysis"
+    authors:
+      - family-names: Arfaoui
+        given-names: Heger
+      - family-names: Hergli
+        given-names: "Mohamed Iheb"
+      - family-names: Benzina
+        given-names: Beya
+      - family-names: BenMiled
+        given-names: Slimane
+    journal: "In Preparation"
+    year: 2025
+    # doi: "10.xxxx/xxxxx"
+  - type: dataset
+    title: "HPV Vaccine Perception Focus Group Data - Tunisia"
+    authors:
+      - family-names: Arfaoui
+        given-names: Heger
+      - family-names: Hergli
+        given-names: "Mohamed Iheb"
+      - family-names: Benzina
+        given-names: Beya
+      - family-names: BenMiled
+        given-names: Slimane
+    year: 2025
+    publisher: "Zenodo"
+    # doi: "10.5281/zenodo.17798456"

@@ -1,0 +1,6 @@
+{
+    "umap__n_neighbors": 15,
+    "umap__n_components": 10,
+    "hdbscan__min_cluster_size": 15,
+    "selection_rationale": "Highest coherence not collapsed to 2 clusters"
+}

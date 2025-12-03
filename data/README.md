@@ -1,6 +1,6 @@
 # Data Directory
 
-The dataset is not included in this repository due to size and to maintain a single authoritative source.
+The dataset is not included in this repository to maintain a single authoritative source.
 
 ## Download the Dataset
 

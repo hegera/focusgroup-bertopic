@@ -4,7 +4,7 @@
 
 This repository contains the complete analysis pipeline for applying BERTopic (neural topic modeling) to focus group transcripts exploring HPV vaccine perceptions in Tunisia.
 
-**Paper:** Arfaoui, H., Hergli, M.I., Benzina, B., & BenMiled, S. (2025). A Reproducible Framework for Neural Topic Modeling in Focus Group Analysis. *In Preparation*. [DOI to be added]
+**Paper:** Arfaoui, H., Hergli, M.I., Benzina, B., & BenMiled, S. (2025). A Reproducible Framework for Neural Topic Modeling in Focus Group Analysis. *In Preparation*. 
 
 **Dataset:** Available at [https://doi.org/10.5281/zenodo.17798456](https://doi.org/10.5281/zenodo.17798456)
 
@@ -32,12 +32,10 @@ NLPHPV_final/
 ├── data/
 │   └── data.csv                 # [Download from Zenodo]
 ├── embeddings/
-│   ├── embeddings.npy           # Pre-computed embeddings [Generated or download]
-│   └── index.csv                # Embedding metadata
+│   ├── embeddings.npy           # Pre-computed embeddings [Generated]
+│   └── index.csv                # Embedding metadata [Generated]
 ├── notebooks/
-│   ├── run_pipeline.ipynb       # Main analysis pipeline
-│   ├── analysis.ipynb           # Results exploration
-│   └── lda_baseline.ipynb       # LDA comparison
+│   └── run_pipeline.ipynb       # Main analysis pipeline
 ├── scripts/
 │   ├── settings.py              # Configuration
 │   ├── encode_embeddings.py     # Generate embeddings
@@ -74,37 +72,11 @@ Place `data.csv` in the `data/` directory.
 
 ### 3. Run Analysis Pipeline
 
-**Option A: Use notebooks (recommended for exploration)**
 ```bash
 jupyter notebook notebooks/run_pipeline.ipynb
 ```
 
-**Option B: Use scripts (for reproduction)**
-```bash
-# Step 1: Generate embeddings
-python scripts/encode_embeddings.py
-
-# Step 2: Run grid search
-python scripts/grid_search.py
-
-# Step 3: Fit final model
-python scripts/fit_final_model.py
-```
-
-### 4. Explore Results
-
-Open `notebooks/analysis.ipynb` to explore the fitted model, visualize topics, and examine document assignments.
-
 ## Reproducibility
-
-### Pre-computed Embeddings
-
-To save computation time, pre-computed embeddings are provided in `embeddings/`. If you want to regenerate them:
-
-```bash
-rm embeddings/*.npy embeddings/*.csv
-python scripts/encode_embeddings.py
-```
 
 ### Random Seed
 
@@ -115,7 +87,7 @@ All random processes use `SEED=42` (set in `scripts/settings.py`) for reproducib
 - **Python:** 3.8+
 - **RAM:** 8GB minimum (16GB recommended for grid search)
 - **GPU:** Optional (speeds up embedding generation)
-- **Time:** ~2-3 hours for full pipeline on CPU
+- **Time:** ~1-2 hours for full pipeline on CPU
 
 ## Key Configuration
 
@@ -127,16 +99,6 @@ The final model uses:
 
 See `results/final_model_*/config.json` for complete configuration.
 
-## Dependencies
-
-Main dependencies (see `requirements.txt` for full list):
-- `bertopic>=0.15.0`
-- `sentence-transformers>=2.2.0`
-- `umap-learn>=0.5.3`
-- `hdbscan>=0.8.29`
-- `scikit-learn>=1.2.0`
-- `pandas>=1.5.0`
-- `gensim>=4.3.0` (for LDA baseline and coherence)
 
 ## Project Workflow
 
@@ -162,11 +124,6 @@ Main dependencies (see `requirements.txt` for full list):
      - Select highest coherence
    - Fit final model
    - Extract topics and assignments
-
-4. **Analysis** (`analysis.ipynb`)
-   - Visualize topics
-   - Examine document assignments
-   - Generate publication figures
 
 ## Citation
 

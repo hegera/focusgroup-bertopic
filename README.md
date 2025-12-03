@@ -166,7 +166,6 @@ The conclusions and opinions expressed in this work are those of the author(s) a
 
 For questions about the methodology or code:
 - Heger Arfaoui: heger.arfaoui@enit.utm.tn
-- GitHub Issues: [Link to issues page]
 
 For questions about the dataset:
 - See the [Zenodo repository](https://doi.org/10.5281/zenodo.17798456)

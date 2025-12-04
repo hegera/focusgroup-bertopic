@@ -1,12 +1,10 @@
 # Neural Topic Modeling of HPV Vaccine Perception Focus Groups
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17798456.svg)](https://doi.org/10.5281/zenodo.17798456)
-
 This repository contains the complete analysis pipeline for applying BERTopic (neural topic modeling) to focus group transcripts exploring HPV vaccine perceptions in Tunisia.
 
 **Paper:** Arfaoui, H., Hergli, M.I., Benzina, B., & BenMiled, S. (2025). A Reproducible Framework for Neural Topic Modeling in Focus Group Analysis. *In Preparation*. 
 
-**Dataset:** Available at [https://doi.org/10.5281/zenodo.17798456](https://doi.org/10.5281/zenodo.17798456)
+**Dataset:** Available at [https://doi.org/10.5281/zenodo.17798456](https://doi.org/10.5281/zenodo.17798455)
 
 ## Overview
 

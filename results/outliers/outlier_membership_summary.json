@@ -1,0 +1,9 @@
+{
+    "n_outliers": 251,
+    "max_soft_membership_probability": {
+        "median": 0.20362947299663195,
+        "min": 0.07749196774542196,
+        "max": 0.5192743582071536
+    },
+    "share_with_probability_ge_0.5": 0.00398406374501992
+}

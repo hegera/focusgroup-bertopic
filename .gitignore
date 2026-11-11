@@ -41,6 +41,11 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Internal: manuscript, reviews and revision working files (not part of the public code)
+paper/
+paper.zip
+revision_outputs/
+
 # Notebooks (work in progress - not ready to share)
 notebooks/analysis.ipynb
 notebooks/lda_baseline.ipynb

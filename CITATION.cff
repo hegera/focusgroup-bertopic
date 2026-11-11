@@ -20,7 +20,7 @@ authors:
     affiliation: "Pasteur Institute of Tunis, University of Tunis El Manar"
     # orcid: "https://orcid.org/0000-0000-0000-0000"
 repository-code: "https://github.com/hegera/focusgroup-bertopic"
-url: "https://doi.org/10.5281/zenodo.17798456"  # Will be assigned by Zenodo after archiving
+url: "https://doi.org/10.5281/zenodo.17798456"  
 abstract: >
   A reproducible Python pipeline for applying BERTopic (neural topic modeling) 
   to focus group transcripts. Includes systematic hyperparameter exploration, 

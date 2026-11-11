@@ -1,0 +1,44 @@
+{
+    "n_models": 260,
+    "vocabulary_size": 1712,
+    "c_v_range": [
+        0.421343754719523,
+        0.553425254395974
+    ],
+    "best_tuned": {
+        "k": 3,
+        "alpha": 0.01,
+        "eta": 0.1,
+        "c_v": 0.553425254395974,
+        "c_npmi": -0.028714330339650828,
+        "c_uci": -1.0142219118518891,
+        "topic_diversity": 0.8666666666666667,
+        "topics": "maladie, cancer, faire, vacciner, médecin, comme, utérus, dit, cette, femme | vaccin, covid, contre, avant, faire, non, état, après, vaccins, santé | vaccination, enfants, santé, confiance, vaccins, ministère, cela, vaccin, plus, informations"
+    },
+    "best_default_priors": {
+        "k": 3,
+        "alpha": "default(1/K)",
+        "eta": "default(1/K)",
+        "c_v": 0.5412631488253683,
+        "c_npmi": -0.017362717163623323,
+        "c_uci": -0.8256676350502378,
+        "topic_diversity": 0.9,
+        "topics": "maladie, cancer, faire, vacciner, médecin, dit, comme, enfants, utérus, femme | vaccin, covid, contre, avant, après, faire, non, vaccins, fait, état | vaccination, santé, enfants, confiance, vaccins, ministère, cela, plus, parents, enfant"
+    },
+    "best_at_k7": {
+        "k": 7,
+        "alpha": 1.0,
+        "eta": 0.5,
+        "c_v": 0.5103130552070587,
+        "c_npmi": -0.04070185916580828,
+        "c_uci": -1.9771228124086673,
+        "topic_diversity": 0.8428571428571429,
+        "topics": "cancer, utérus, comme, faire, vaccins, femme, maladie, secteur, privé, parler | vaccin, covid, contre, avant, après, avoir, reçu, beaucoup, effets, plusieurs | santé, confiance, ministère, parents, médecins, enfants, quand, plus, vaccination, cela | peut, cette, maladie, être, femmes, gens, pourquoi, parce, plus, elles | vaccination, tout, monde, virus, si, dit, pense, information, vacciner, fille | enfants, informations, enfant, vaccins, maladies, tous, vacciner, faire, école, toujours | médecin, cela, fait, bien, peur, dit, confiance, malade, problème, si"
+    },
+    "seed_sensitivity_c_v": {
+        "mean": 0.46944455988384276,
+        "sd": 0.03439496784430605,
+        "min": 0.3999827745686102,
+        "max": 0.5307603246860063
+    }
+}

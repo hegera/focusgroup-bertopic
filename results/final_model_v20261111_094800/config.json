@@ -1,0 +1,18 @@
+{
+    "seed": 42,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+    "umap__n_neighbors": 15,
+    "umap__n_components": 10,
+    "hdbscan__min_cluster_size": 15,
+    "num_topics": 7,
+    "outlier_fraction": 0.23348837209302326,
+    "quality_metrics": {
+        "c_v": 0.6061225214955577,
+        "c_npmi": 0.014599728902526563,
+        "c_uci": -1.353119215605213,
+        "topic_diversity": 0.7571428571428571
+    },
+    "topic_keywords": "c-TF-IDF, top 10 words, NLTK French stop words removed",
+    "selection_rationale": "Highest C_V and C_NPMI coherence with adequate granularity (7 topics)",
+    "timestamp": "20261111_094800"
+}

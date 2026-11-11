@@ -13,11 +13,13 @@ This project demonstrates a systematic framework for applying transformer-based 
 - Sentence embedding generation using multilingual transformers
 - Comprehensive hyperparameter grid search (27 configurations)
 - Bootstrap stability analysis (NMI, ARI)
-- Multi-criteria model selection (coherence, stability, interpretability)
-- Comparison with LDA baseline
+- Topic quality metrics on stop-word-filtered keywords (C_V, C_NPMI, C_UCI, Topic Diversity)
+- Multi-criteria model selection (coherence, stability, granularity, coverage)
+- Comparison with an LDA baseline with tuned Dirichlet priors
+- Sensitivity analysis of outlier reassignment
 - Human validation by domain experts
 
-**Key Finding:** BERTopic achieved 18% higher coherence than optimized LDA (0.573 vs 0.486) with 7 interpretable topics validated by independent experts (ICC = 0.700).
+**Key Finding:** BERTopic achieved 9.5% higher coherence than an LDA baseline with tuned priors (C_V 0.606 vs 0.553) with 7 topics validated by independent experts (ICC = 0.700).
 
 ## Repository Structure
 
@@ -35,14 +37,22 @@ NLPHPV_final/
 ├── notebooks/
 │   └── run_pipeline.ipynb       # Main analysis pipeline
 ├── scripts/
-│   ├── settings.py              # Configuration
+│   ├── settings.py              # Configuration (seed, grids, bootstrap settings)
+│   ├── metrics.py               # Stop-word list, topic keywords, coherence and diversity metrics
 │   ├── encode_embeddings.py     # Generate embeddings
-│   ├── grid_search.py           # Hyperparameter search
+│   ├── grid_search.py           # Hyperparameter search with bootstrap stability
 │   ├── fit_final_model.py       # Fit selected model
+│   ├── lda_baseline.py          # LDA baseline (number of topics and Dirichlet priors)
+│   ├── outlier_sensitivity.py   # Outlier reassignment sensitivity analysis
+│   └── human_validation.py      # Sampling procedure and inter-annotator agreement
 └── results/
+    ├── Figures/                 # Grid search heatmaps
     ├── final_model_*/           # Final model artifacts
-    ├── selection/               # Model selection results
-    └── stability/               # Grid search metrics
+    ├── selection/               # Selected configuration
+    ├── stability/               # Grid search metrics
+    ├── lda/                     # LDA baseline results
+    ├── outliers/                # Outlier sensitivity results
+    └── human_validation/        # Agreement statistics
 ```
 
 ## Quick Start
@@ -74,18 +84,30 @@ Place `data.csv` in the `data/` directory.
 jupyter notebook notebooks/run_pipeline.ipynb
 ```
 
+The scripts can also be run directly. They use paths relative to `scripts/`, so run them from that directory:
+
+```bash
+cd scripts
+python encode_embeddings.py
+python grid_search.py
+python fit_final_model.py
+python lda_baseline.py
+python outlier_sensitivity.py
+python human_validation.py
+```
+
 ## Reproducibility
 
 ### Random Seed
 
-All random processes use `SEED=42` (set in `scripts/settings.py`) for reproducibility.
+All random processes use `SEED=42` (set in `scripts/settings.py`) for reproducibility. Bootstrap replicate *i* uses seed 42 + *i*. `requirements.txt` pins the package versions used for the reported results; small numerical differences can occur in other environments for configurations with the largest UMAP settings.
 
 ### System Requirements
 
-- **Python:** 3.8+
+- **Python:** 3.13 (version used for the reported results)
 - **RAM:** 8GB minimum (16GB recommended for grid search)
 - **GPU:** Optional (speeds up embedding generation)
-- **Time:** ~1-2 hours for full pipeline on CPU
+- **Time:** about 25 minutes for the grid search on CPU (about 6 minutes with 4 parallel jobs); the other steps take a few minutes
 
 ## Key Configuration
 
@@ -93,7 +115,8 @@ The final model uses:
 - **Embedding model:** `paraphrase-multilingual-mpnet-base-v2`
 - **UMAP parameters:** `n_neighbors=15`, `n_components=10`
 - **HDBSCAN parameters:** `min_cluster_size=15`
-- **Number of topics:** 7
+- **Topic keywords:** c-TF-IDF, top 10 words, NLTK French stop words removed (stop words are kept for the embeddings)
+- **Number of topics:** 7 (23.3% of utterances are outliers)
 
 See `results/final_model_*/config.json` for complete configuration.
 
@@ -109,19 +132,26 @@ See `results/final_model_*/config.json` for complete configuration.
    - Define hyperparameter grid (UMAP + HDBSCAN)
    - For each configuration:
      - Fit BERTopic model
-     - Compute coherence (c_v)
-     - Perform bootstrap stability analysis (100 samples)
+     - Compute coherence (C_V, C_NPMI, C_UCI) and Topic Diversity on stop-word-filtered keywords
+     - Perform bootstrap stability analysis (30 replicates, 85% of documents drawn with replacement)
      - Calculate ARI and NMI
-   - Save all metrics
+   - Save all metrics and heatmaps
 
-3. **Model Selection** (`fit_final_model.py`)
-   - Load grid search results
-   - Apply selection criteria:
-     - Remove collapsed models (≤3 topics)
-     - Remove unstable models
-     - Select highest coherence
+3. **Model Selection** (notebook, then `fit_final_model.py`)
+   - Review the grid search figures
+   - Select a configuration manually, balancing coherence, stability, granularity and coverage
    - Fit final model
    - Extract topics and assignments
+
+4. **LDA Baseline** (`lda_baseline.py`)
+   - Grid over the number of topics (3-15) and both Dirichlet priors (260 models)
+   - Same stop-word list, tokenisation and coherence procedure as BERTopic
+
+5. **Outlier Sensitivity** (`outlier_sensitivity.py`)
+   - Reassign the outliers of the selected model with `reduce_outliers` and recompute the metrics
+
+6. **Human Validation** (`human_validation.py`)
+   - Sampling procedure for the expert review and inter-annotator agreement (ICC, weighted kappa)
 
 ## Citation
 

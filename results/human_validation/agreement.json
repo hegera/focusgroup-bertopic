@@ -1,0 +1,25 @@
+{
+    "icc_2_1": 0.7,
+    "quadratic_weighted_kappa_pairs": {
+        "annotator1-annotator2": 0.8073394495412843,
+        "annotator1-annotator3": 0.6379310344827586,
+        "annotator2-annotator3": 0.588235294117647
+    },
+    "quadratic_weighted_kappa_mean": 0.6778352593805632,
+    "topic_mean_ratings": [
+        1.67,
+        4.33,
+        4.67,
+        4.33,
+        3.33,
+        4.33,
+        4.0
+    ],
+    "overall_mean_rating": 3.8095238095238093,
+    "topics_within_one_point": 6,
+    "topics_with_mean_at_least_4": 5,
+    "spearman_topic_size_vs_mean_rating": {
+        "rho": -0.037062465833055065,
+        "p": 0.9371240086628561
+    }
+}

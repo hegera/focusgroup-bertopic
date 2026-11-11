@@ -6,7 +6,37 @@ from umap import UMAP
 from hdbscan import HDBSCAN
 from datetime import datetime
 import json
+from metrics import bertopic_topic_words, keyword_vectorizer, quality_metrics, tokenize
 from settings import SEED
+
+PUBLIC_COLUMNS = ["sentence", "participant", "gender", "region", "age"]
+
+
+def fit_selected_model(docs, embeddings, selected_config):
+    """Fit BERTopic with the selected configuration; returns (model, topics, probabilities)."""
+    umap_model = UMAP(
+        n_neighbors=selected_config["umap__n_neighbors"],
+        n_components=selected_config["umap__n_components"],
+        min_dist=0.0,
+        metric="cosine",
+        random_state=SEED
+    )
+    hdbscan_model = HDBSCAN(
+        min_cluster_size=selected_config["hdbscan__min_cluster_size"],
+        metric="euclidean",
+        cluster_selection_method="eom",
+        prediction_data=True
+    )
+    topic_model = BERTopic(
+        language="french",
+        umap_model=umap_model,
+        hdbscan_model=hdbscan_model,
+        vectorizer_model=keyword_vectorizer(),  # stop words removed from topic keywords only
+        calculate_probabilities=True,
+        verbose=False
+    )
+    topics, probs = topic_model.fit_transform(docs, embeddings)
+    return topic_model, topics, probs
 
 
 def fit_final_model():
@@ -44,28 +74,7 @@ def fit_final_model():
 
     # Fit BERTopic model
     print("\nFitting BERTopic model...")
-    umap_model = UMAP(
-        n_neighbors=selected_config["umap__n_neighbors"],
-        n_components=selected_config["umap__n_components"],
-        min_dist=0.0,
-        metric="cosine",
-        random_state=SEED
-    )
-    hdbscan_model = HDBSCAN(
-        min_cluster_size=selected_config["hdbscan__min_cluster_size"],
-        metric="euclidean",
-        cluster_selection_method="eom",
-        prediction_data=True
-    )
-    
-    topic_model = BERTopic(
-        language="french",
-        umap_model=umap_model,
-        hdbscan_model=hdbscan_model,
-        calculate_probabilities=True,
-        verbose=False
-    )
-    topics, probs = topic_model.fit_transform(docs, embeddings)
+    topic_model, topics, probs = fit_selected_model(docs, embeddings, selected_config)
     
     final_topics = len([t for t in topic_model.get_topics().keys() if t != -1])
     print(f"Number of topics discovered: {final_topics}")
@@ -108,7 +117,7 @@ def fit_final_model():
     
     # Create document assignments CSV
     print("\nCreating document assignments...")
-    doc_assignments = data_df.copy()
+    doc_assignments = data_df[[c for c in PUBLIC_COLUMNS if c in data_df.columns]].copy()
     doc_assignments['topic_id'] = topics
     doc_assignments['topic_probability'] = [
         probs[i][topics[i]] if topics[i] != -1 and probs is not None else 0.0
@@ -144,6 +153,9 @@ def fit_final_model():
         "umap__n_components": selected_config["umap__n_components"],
         "hdbscan__min_cluster_size": selected_config["hdbscan__min_cluster_size"],
         "num_topics": final_topics,
+        "outlier_fraction": list(topics).count(-1) / len(topics),
+        "quality_metrics": quality_metrics(bertopic_topic_words(topic_model), tokenize(docs)),
+        "topic_keywords": "c-TF-IDF, top 10 words, NLTK French stop words removed",
         "selection_rationale": selected_config.get('selection_rationale', 'N/A'),
         "timestamp": timestamp
     }

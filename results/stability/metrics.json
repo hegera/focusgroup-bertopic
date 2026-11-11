@@ -5,7 +5,10 @@
             "umap__n_components": 5,
             "umap__n_neighbors": 10
         },
-        "coherence_score": 0.4066960786110289,
+        "coherence_score": 0.4388194001592058,
+        "c_npmi": -0.1848106590846338,
+        "c_uci": -7.405046500302143,
+        "topic_diversity": 0.8090909090909091,
         "median_ari": 0.13670633659835726,
         "median_nmi": 0.702738735351833,
         "num_topics": 55,
@@ -18,7 +21,10 @@
             "umap__n_components": 5,
             "umap__n_neighbors": 15
         },
-        "coherence_score": 0.4306809007306418,
+        "coherence_score": 0.43524029075543946,
+        "c_npmi": -0.16764527023130163,
+        "c_uci": -7.00813472894659,
+        "topic_diversity": 0.8333333333333334,
         "median_ari": 0.12204131135438644,
         "median_nmi": 0.675642401841586,
         "num_topics": 45,
@@ -31,9 +37,12 @@
             "umap__n_components": 5,
             "umap__n_neighbors": 30
         },
-        "coherence_score": 0.4153109999030393,
-        "median_ari": 0.10746832590077307,
-        "median_nmi": 0.637107157227248,
+        "coherence_score": 0.43097623946473906,
+        "c_npmi": -0.17435489254070163,
+        "c_uci": -7.240981087936512,
+        "topic_diversity": 0.8382978723404255,
+        "median_ari": 0.10693133525578531,
+        "median_nmi": 0.6370422971608278,
         "num_topics": 47,
         "outlier_fraction": 0.3841860465116279,
         "main_topic_fraction": 0.03813953488372093
@@ -44,7 +53,10 @@
             "umap__n_components": 10,
             "umap__n_neighbors": 10
         },
-        "coherence_score": 0.4113262520831145,
+        "coherence_score": 0.44600214262209986,
+        "c_npmi": -0.17664490610060546,
+        "c_uci": -7.237333183544648,
+        "topic_diversity": 0.806,
         "median_ari": 0.14536598403548293,
         "median_nmi": 0.6976230404500365,
         "num_topics": 50,
@@ -57,7 +69,10 @@
             "umap__n_components": 10,
             "umap__n_neighbors": 15
         },
-        "coherence_score": 0.4115675413800652,
+        "coherence_score": 0.4313140394012436,
+        "c_npmi": -0.176824283674081,
+        "c_uci": -7.2567312698622715,
+        "topic_diversity": 0.8208333333333333,
         "median_ari": 0.12326762212412266,
         "median_nmi": 0.6724459689158363,
         "num_topics": 48,
@@ -70,9 +85,12 @@
             "umap__n_components": 10,
             "umap__n_neighbors": 30
         },
-        "coherence_score": 0.4165354515358906,
-        "median_ari": 0.10774905949026156,
-        "median_nmi": 0.6309189461917312,
+        "coherence_score": 0.42945912237710715,
+        "c_npmi": -0.1604431136155769,
+        "c_uci": -6.736313421850384,
+        "topic_diversity": 0.8256410256410256,
+        "median_ari": 0.10828983033054254,
+        "median_nmi": 0.6314449367824911,
         "num_topics": 39,
         "outlier_fraction": 0.37488372093023253,
         "main_topic_fraction": 0.05023255813953489
@@ -83,12 +101,15 @@
             "umap__n_components": 50,
             "umap__n_neighbors": 10
         },
-        "coherence_score": 0.3867502744185871,
-        "median_ari": 0.1567983674948183,
-        "median_nmi": 0.6917551846237855,
-        "num_topics": 49,
-        "outlier_fraction": 0.2651162790697674,
-        "main_topic_fraction": 0.052093023255813956
+        "coherence_score": 0.4158052916228354,
+        "c_npmi": -0.1767765254579209,
+        "c_uci": -7.162697788421412,
+        "topic_diversity": 0.7980392156862746,
+        "median_ari": 0.15839421176308668,
+        "median_nmi": 0.6912623183948777,
+        "num_topics": 51,
+        "outlier_fraction": 0.24186046511627907,
+        "main_topic_fraction": 0.053023255813953486
     },
     {
         "params": {
@@ -96,12 +117,15 @@
             "umap__n_components": 50,
             "umap__n_neighbors": 15
         },
-        "coherence_score": 0.4234659947796568,
-        "median_ari": 0.13784970584059986,
-        "median_nmi": 0.6654352679801296,
-        "num_topics": 45,
-        "outlier_fraction": 0.3041860465116279,
-        "main_topic_fraction": 0.05767441860465116
+        "coherence_score": 0.4401056580786968,
+        "c_npmi": -0.1565789088682157,
+        "c_uci": -6.784694109342502,
+        "topic_diversity": 0.8204545454545454,
+        "median_ari": 0.13408031044542038,
+        "median_nmi": 0.6662025160121399,
+        "num_topics": 44,
+        "outlier_fraction": 0.29209302325581393,
+        "main_topic_fraction": 0.059534883720930236
     },
     {
         "params": {
@@ -109,12 +133,15 @@
             "umap__n_components": 50,
             "umap__n_neighbors": 30
         },
-        "coherence_score": 0.4295752539442259,
-        "median_ari": 0.11938420827883753,
-        "median_nmi": 0.630872153573265,
+        "coherence_score": 0.4292125606867854,
+        "c_npmi": -0.16787690182118603,
+        "c_uci": -6.858784802406294,
+        "topic_diversity": 0.8352941176470589,
+        "median_ari": 0.12003721493643423,
+        "median_nmi": 0.6327714680166588,
         "num_topics": 34,
-        "outlier_fraction": 0.34511627906976744,
-        "main_topic_fraction": 0.06976744186046512
+        "outlier_fraction": 0.3469767441860465,
+        "main_topic_fraction": 0.06883720930232558
     },
     {
         "params": {
@@ -122,7 +149,10 @@
             "umap__n_components": 5,
             "umap__n_neighbors": 10
         },
-        "coherence_score": 0.471459117433856,
+        "coherence_score": 0.4507390988389379,
+        "c_npmi": -0.1362840743901295,
+        "c_uci": -5.8988990121858125,
+        "topic_diversity": 0.796,
         "median_ari": 0.15557671373286722,
         "median_nmi": 0.558436609367672,
         "num_topics": 25,
@@ -135,7 +165,10 @@
             "umap__n_components": 5,
             "umap__n_neighbors": 15
         },
-        "coherence_score": 0.47798256347246004,
+        "coherence_score": 0.48132311727390914,
+        "c_npmi": -0.09074850404862977,
+        "c_uci": -4.681723793067053,
+        "topic_diversity": 0.785,
         "median_ari": 0.15370593937481894,
         "median_nmi": 0.5359164970025662,
         "num_topics": 20,
@@ -148,9 +181,12 @@
             "umap__n_components": 5,
             "umap__n_neighbors": 30
         },
-        "coherence_score": 0.5205423769221219,
-        "median_ari": 0.14608261069179634,
-        "median_nmi": 0.5066240318823049,
+        "coherence_score": 0.5062234603668779,
+        "c_npmi": -0.06225290346789331,
+        "c_uci": -3.936354616734475,
+        "topic_diversity": 0.7714285714285715,
+        "median_ari": 0.147466296026165,
+        "median_nmi": 0.5067687216684762,
         "num_topics": 14,
         "outlier_fraction": 0.38790697674418606,
         "main_topic_fraction": 0.19441860465116279
@@ -161,7 +197,10 @@
             "umap__n_components": 10,
             "umap__n_neighbors": 10
         },
-        "coherence_score": 0.4958106561561138,
+        "coherence_score": 0.47095309788021494,
+        "c_npmi": -0.08883248951688953,
+        "c_uci": -4.469365613724311,
+        "topic_diversity": 0.7647058823529411,
         "median_ari": 0.16213566543614133,
         "median_nmi": 0.5520167542431484,
         "num_topics": 17,
@@ -174,7 +213,10 @@
             "umap__n_components": 10,
             "umap__n_neighbors": 15
         },
-        "coherence_score": 0.5190677985264435,
+        "coherence_score": 0.5711141426600631,
+        "c_npmi": -0.00960688181455366,
+        "c_uci": -2.574648799946242,
+        "topic_diversity": 0.8,
         "median_ari": 0.15135427630337095,
         "median_nmi": 0.5314863880138241,
         "num_topics": 11,
@@ -187,9 +229,12 @@
             "umap__n_components": 10,
             "umap__n_neighbors": 30
         },
-        "coherence_score": 0.5007555425604717,
-        "median_ari": 0.1391006510778388,
-        "median_nmi": 0.4891374691358249,
+        "coherence_score": 0.4714288717450374,
+        "c_npmi": -0.07870293531577036,
+        "c_uci": -4.175216168914317,
+        "topic_diversity": 0.8076923076923077,
+        "median_ari": 0.13713145759134562,
+        "median_nmi": 0.4898659889032766,
         "num_topics": 13,
         "outlier_fraction": 0.36,
         "main_topic_fraction": 0.24186046511627907
@@ -200,12 +245,15 @@
             "umap__n_components": 50,
             "umap__n_neighbors": 10
         },
-        "coherence_score": 0.47760969073324683,
-        "median_ari": 0.1657109258092486,
-        "median_nmi": 0.5443556615513764,
-        "num_topics": 22,
-        "outlier_fraction": 0.37488372093023253,
-        "main_topic_fraction": 0.062325581395348835
+        "coherence_score": 0.49189719777655067,
+        "c_npmi": -0.10277738515696792,
+        "c_uci": -5.04437844869748,
+        "topic_diversity": 0.7652173913043478,
+        "median_ari": 0.1598381950744652,
+        "median_nmi": 0.5393789603759861,
+        "num_topics": 23,
+        "outlier_fraction": 0.38883720930232557,
+        "main_topic_fraction": 0.061395348837209304
     },
     {
         "params": {
@@ -213,12 +261,15 @@
             "umap__n_components": 50,
             "umap__n_neighbors": 15
         },
-        "coherence_score": 0.46273304288954065,
-        "median_ari": 0.15724781324963855,
-        "median_nmi": 0.5312880662282381,
-        "num_topics": 16,
-        "outlier_fraction": 0.3209302325581395,
-        "main_topic_fraction": 0.1013953488372093
+        "coherence_score": 0.47421469673142885,
+        "c_npmi": -0.11304837364805116,
+        "c_uci": -5.191656269200785,
+        "topic_diversity": 0.7761904761904762,
+        "median_ari": 0.16739444500331768,
+        "median_nmi": 0.5334995779151745,
+        "num_topics": 21,
+        "outlier_fraction": 0.3758139534883721,
+        "main_topic_fraction": 0.0586046511627907
     },
     {
         "params": {
@@ -226,12 +277,15 @@
             "umap__n_components": 50,
             "umap__n_neighbors": 30
         },
-        "coherence_score": 0.4750110130573531,
-        "median_ari": 0.13656194284669756,
-        "median_nmi": 0.47643450409457266,
-        "num_topics": 10,
-        "outlier_fraction": 0.2855813953488372,
-        "main_topic_fraction": 0.23906976744186045
+        "coherence_score": 0.5090871584540374,
+        "c_npmi": -0.04972405677395055,
+        "c_uci": -3.5121563467659267,
+        "topic_diversity": 0.8272727272727273,
+        "median_ari": 0.1401814490048078,
+        "median_nmi": 0.4862046549360453,
+        "num_topics": 11,
+        "outlier_fraction": 0.3627906976744186,
+        "main_topic_fraction": 0.15069767441860465
     },
     {
         "params": {
@@ -239,7 +293,10 @@
             "umap__n_components": 5,
             "umap__n_neighbors": 10
         },
-        "coherence_score": 0.504014652741714,
+        "coherence_score": 0.45141641441689,
+        "c_npmi": -0.09363058477274096,
+        "c_uci": -4.331106114926977,
+        "topic_diversity": 0.825,
         "median_ari": 0.16264930699264615,
         "median_nmi": 0.43120704744652316,
         "num_topics": 12,
@@ -252,7 +309,10 @@
             "umap__n_components": 5,
             "umap__n_neighbors": 15
         },
-        "coherence_score": 0.5153511001775339,
+        "coherence_score": 0.4818906593475608,
+        "c_npmi": -0.08327689662808328,
+        "c_uci": -3.9366201574719524,
+        "topic_diversity": 0.8,
         "median_ari": 0.1529814161250916,
         "median_nmi": 0.41611422511609353,
         "num_topics": 10,
@@ -265,9 +325,12 @@
             "umap__n_components": 5,
             "umap__n_neighbors": 30
         },
-        "coherence_score": 0.5105547672635579,
-        "median_ari": 0.20231997442812974,
-        "median_nmi": 0.42020147328377877,
+        "coherence_score": 0.48848109861394284,
+        "c_npmi": -0.08066949207652405,
+        "c_uci": -3.9391747210006773,
+        "topic_diversity": 0.8222222222222222,
+        "median_ari": 0.2062702404189713,
+        "median_nmi": 0.4203888747678484,
         "num_topics": 9,
         "outlier_fraction": 0.33488372093023255,
         "main_topic_fraction": 0.2855813953488372
@@ -278,7 +341,10 @@
             "umap__n_components": 10,
             "umap__n_neighbors": 10
         },
-        "coherence_score": 0.5871038381536183,
+        "coherence_score": 0.5168938247459831,
+        "c_npmi": -0.031828827687653743,
+        "c_uci": -1.0401678959321334,
+        "topic_diversity": 0.95,
         "median_ari": 0.16664558020274,
         "median_nmi": 0.4349677531364248,
         "num_topics": 2,
@@ -291,7 +357,10 @@
             "umap__n_components": 10,
             "umap__n_neighbors": 15
         },
-        "coherence_score": 0.5728767140861125,
+        "coherence_score": 0.6061225214955577,
+        "c_npmi": 0.014599728902526563,
+        "c_uci": -1.353119215605213,
+        "topic_diversity": 0.7571428571428571,
         "median_ari": 0.16440962044179802,
         "median_nmi": 0.38792365812097324,
         "num_topics": 7,
@@ -304,9 +373,12 @@
             "umap__n_components": 10,
             "umap__n_neighbors": 30
         },
-        "coherence_score": 0.5234071571912441,
-        "median_ari": 0.19489601380328894,
-        "median_nmi": 0.4202603835138465,
+        "coherence_score": 0.524304840852395,
+        "c_npmi": -0.046232418187222006,
+        "c_uci": -3.2318414226582126,
+        "topic_diversity": 0.82,
+        "median_ari": 0.18556163493279587,
+        "median_nmi": 0.4162442044620493,
         "num_topics": 10,
         "outlier_fraction": 0.35627906976744184,
         "main_topic_fraction": 0.15813953488372093
@@ -317,12 +389,15 @@
             "umap__n_components": 50,
             "umap__n_neighbors": 10
         },
-        "coherence_score": 0.5493976554404782,
-        "median_ari": 0.16505716193191575,
-        "median_nmi": 0.419813071698375,
+        "coherence_score": 0.5513437151432948,
+        "c_npmi": -0.034026388548872945,
+        "c_uci": -2.6741560881043864,
+        "topic_diversity": 0.85,
+        "median_ari": 0.1648748971297399,
+        "median_nmi": 0.4264155624779885,
         "num_topics": 8,
-        "outlier_fraction": 0.24930232558139534,
-        "main_topic_fraction": 0.3358139534883721
+        "outlier_fraction": 0.2502325581395349,
+        "main_topic_fraction": 0.33767441860465114
     },
     {
         "params": {
@@ -330,12 +405,15 @@
             "umap__n_components": 50,
             "umap__n_neighbors": 15
         },
-        "coherence_score": 0.5027933441466809,
-        "median_ari": 0.1641581181289286,
-        "median_nmi": 0.42360372076831704,
-        "num_topics": 11,
-        "outlier_fraction": 0.2948837209302326,
-        "main_topic_fraction": 0.24558139534883722
+        "coherence_score": 0.49333527466932076,
+        "c_npmi": -0.06739805939730366,
+        "c_uci": -3.861661033163449,
+        "topic_diversity": 0.8583333333333333,
+        "median_ari": 0.16347350831796448,
+        "median_nmi": 0.4209628800474996,
+        "num_topics": 12,
+        "outlier_fraction": 0.38976744186046514,
+        "main_topic_fraction": 0.13674418604651162
     },
     {
         "params": {
@@ -343,11 +421,14 @@
             "umap__n_components": 50,
             "umap__n_neighbors": 30
         },
-        "coherence_score": 0.5160166500247321,
-        "median_ari": 0.18871106968649143,
-        "median_nmi": 0.41907353353956195,
-        "num_topics": 10,
-        "outlier_fraction": 0.37116279069767444,
-        "main_topic_fraction": 0.23162790697674418
+        "coherence_score": 0.5352185160815104,
+        "c_npmi": -0.07319595242766479,
+        "c_uci": -3.8966197646727667,
+        "topic_diversity": 0.8333333333333334,
+        "median_ari": 0.22868166450963484,
+        "median_nmi": 0.43476173094913567,
+        "num_topics": 9,
+        "outlier_fraction": 0.3302325581395349,
+        "main_topic_fraction": 0.2288372093023256
     }
 ]
